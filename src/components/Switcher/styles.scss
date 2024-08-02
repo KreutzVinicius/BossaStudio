@@ -1,0 +1,51 @@
+@import '../../colors';
+@import '../../fonts';
+
+/* Estilos para o switcher */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 48px;
+  height: 32px;
+}
+
+.switch input {
+  display: none;
+}
+
+.slider {
+  width: 48px;
+  height: 32px;
+  flex-shrink: 0;
+  background: white;
+  border: 1px solid var(--neutral-dark-0, #c4c4c4);
+  border-radius: 100px;
+  cursor: pointer;
+  transition: 0.2s;
+  display: flex;
+  align-items: center;
+}
+
+.knob {
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+  background-color: $neutral-dark-0;
+  border-radius: 50%;
+  transition: 0.4s;
+  transform: translateX(3px);
+}
+
+.slider .knob.checked {
+  transform: translateX(16px);
+}
+
+input:checked + .slider {
+  background: var(--gradient-brand, linear-gradient(27deg, #1c5aff 0%, #00c9e8 100%));
+}
+
+input:checked + .slider .knob {
+  transform: translateX(19px);
+  background-color: white;
+}

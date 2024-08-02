@@ -1,0 +1,71 @@
+@use "/src/_fonts.scss" as *;
+@use "/src/_colors.scss" as *;
+
+.buttons-variants-wrapper {
+  display: flex;
+  justify-content: center;
+
+  button:hover {
+    outline: none;
+  }
+
+  button:focus {
+    outline: 1px solid #2f5df5 !important;
+  }
+
+  button {
+    height: 3rem;
+    width: 21rem;
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .disabled-button {
+    cursor: not-allowed;
+    background-color: $neutral-light-2;
+    color: $neutral-light-0;
+    border: none;
+  }
+
+  .default-button {
+    background-color: $elektrafi-neutral;
+    color: white;
+    border: none;
+  }
+
+  .destructive-button {
+    background-color: $negative-light;
+    color: $negative-neutral;
+    border: none;
+  }
+
+  .secondary-button {
+    background-color: transparent;
+    border: 1px solid $neutral-light-1;
+    color: $neutral-dark-2;
+  }
+
+  .transparent-button {
+    background-color: transparent;
+    border: none;
+    color: $neutral-dark-2;
+  }
+}
+
+@media (max-width: $tablet-size) {
+  .buttons-variants-wrapper {
+    button {
+      width: 20rem;
+    }
+  }
+}
+
+@media (max-width: $phone-size) {
+  .buttons-variants-wrapper {
+    button {
+      width: 100%;
+    }
+  }
+}

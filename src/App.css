@@ -1,0 +1,26 @@
+.App {
+    width: 100vw;
+    min-height: 100vh;
+    background-color: var(--color-background);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+:root {
+    --color-background: #F5F5F5;
+    --color-primary-light: #b2bcb9;
+    --color-primary-dark: #424e47;
+    --color-secondary: #8c5643;
+    --color-dark: #2c282c;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    font-family: 'Mulish';
+}
