@@ -1,5 +1,5 @@
-@import '../../colors';
-@import '../../fonts';
+@import "../../colors";
+@import "../../fonts";
 
 /* Estilos para o switcher */
 .switch {
@@ -42,7 +42,10 @@
 }
 
 input:checked + .slider {
-  background: var(--gradient-brand, linear-gradient(27deg, #1c5aff 0%, #00c9e8 100%));
+  background: var(
+    --gradient-brand,
+    linear-gradient(27deg, #1c5aff 0%, #00c9e8 100%)
+  );
 }
 
 input:checked + .slider .knob {

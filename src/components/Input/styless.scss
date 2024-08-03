@@ -1,5 +1,5 @@
 @use "/src/colors" as *;
-@use '/src/fonts' as *;
+@use "/src/fonts" as *;
 
 .input-main {
   position: relative;
@@ -10,17 +10,14 @@
     align-items: flex-start;
     gap: 10px;
     color: #232a43;
-    font-family: Inter;
     font-size: 12px;
     font-style: normal;
     font-weight: 600;
     line-height: 16px;
   }
 
-
   .label-tooltip-container {
     display: flex;
-
   }
 
   input {
@@ -47,9 +44,10 @@
 
   ::placeholder,
   :-ms-input-placeholder,     /* Internet Explorer 10-11 */
-  ::-ms-input-placeholder {   /* Microsoft Edge */
+  ::-ms-input-placeholder {
+    /* Microsoft Edge */
     color: $neutral-light-0;
-   
+
     @extend %elektrafi-paragraph-medium;
   }
 
@@ -117,7 +115,7 @@
   }
 
   /* Firefox */
-  input[type=number] {
+  input[type="number"] {
     -moz-appearance: textfield;
   }
 }

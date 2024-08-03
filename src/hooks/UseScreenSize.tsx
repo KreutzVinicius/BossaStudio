@@ -26,7 +26,14 @@ const useScreenSize = () => {
     };
   }, []);
 
-  return { isMobile, innerWidth, innerHeight, isMobilePhone, isMobileTablet, isMobilePhoneMedium };
+  return {
+    isMobile,
+    innerWidth,
+    innerHeight,
+    isMobilePhone,
+    isMobileTablet,
+    isMobilePhoneMedium,
+  };
 };
 
 export default useScreenSize;

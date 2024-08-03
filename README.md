@@ -1,7 +1,7 @@
 ## Instalation
 
-```yarn install```
+`yarn install`
 
 ## Run
 
-```yarn dev```
+`yarn dev`

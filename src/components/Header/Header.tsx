@@ -1,37 +1,38 @@
-import { useNavigate } from 'react-router-dom'
-import './styles.css'
+import { useNavigate } from 'react-router-dom';
+import { Tabs, Tab } from '@mui/material';
+import { useState } from 'react';
+import logo from '@assets/svg/bossa.svg';
+import './styles.css';
 
 export interface HeaderProps {
-    content: string
-    subcontent?: string
+  content: string;
+  subcontent?: string;
 }
 // { content, subcontent }: HeaderProps
 const Header = () => {
+  const [value, setValue] = useState(0);
 
-    const navigate = useNavigate()
+  const handleChange = (_event: React.SyntheticEvent, newValue: number) => {
+    setValue(newValue);
+  };
 
-    return (
-        <div className="page-header">
-            <div className="top-bar-container">
-                {/* <a href={'/'}>
-                    <img src="images/icons/back.svg" alt="Voltar" />
-                </a> */}
-                <div className="top-right-header">
-                    <img
-                        src="images/logo.svg"
-                        alt=""
-                        onClick={() => navigate('/')}
-                    />
-                </div>
-                Projetos autorais
+  const navigate = useNavigate();
 
-                Archviz
-                
-                Sobre
-
-                Contato
-            </div>
-        </div>
-    )
-}
-export default Header
+  return (
+    <div className="page-header">
+      {/* <a href={'/'}>
+        <img src={} alt="Voltar" />
+      </a> */}
+      <div className="header-logo-container">
+        <img src={logo} alt="" onClick={() => navigate(`/`)} className="logo" />
+      </div>
+      <Tabs value={value} onChange={handleChange} className="header-text-container">
+        <Tab value="one" label="Projetos autorais" className="header-text" />
+        <Tab value="two" label="Archviz" className="header-text" />
+        <Tab value="three" label="Sobre" className="header-text" />
+        <Tab value="four" label=" Contato" className="header-text" />
+      </Tabs>
+    </div>
+  );
+};
+export default Header;

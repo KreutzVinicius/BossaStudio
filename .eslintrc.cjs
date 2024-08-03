@@ -28,6 +28,7 @@ module.exports = {
     '@typescript-eslint/no-non-null-assertion': `off`,
     '@typescript-eslint/no-unused-vars': [`warn`, { argsIgnorePattern: `^_` }],
     'no-const-assign': `error`,
+    'no-console': [`warn`, { allow: [`warn`, `error`] }],
   },
   settings: {
     'import/resolver': {

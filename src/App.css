@@ -1,26 +1,46 @@
 .App {
-    width: 100vw;
-    min-height: 100vh;
-    background-color: var(--color-background);
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--color-background);
+
 }
 
 :root {
-    --color-background: #F5F5F5;
-    --color-primary-light: #b2bcb9;
-    --color-primary-dark: #424e47;
-    --color-secondary: #8c5643;
-    --color-dark: #2c282c;
+
+  --phone-size: 600px;
+  --tablet-size: 1024px;
+
+  --color-background: #f5f5f5;
+  --color-primary-light: #b2bcb9;
+  --color-primary-dark: #424e47;
+  --color-secondary: #8c5643;
+  --color-dark: #2c282c;
+  
+/* Positive */
+  --positive-light: #cefde2;
+  --positive-neutral: #09c35a;
+  --positive-dark: #079243;
+
+  /* Negative */
+  --negative-light: #f7d4d9;
+  --negative-neutral: #ab2135;
+  --negative-dark: #811828;
+
+  /* Warning */
+  --warning-light: #fff4cc;
+  --warning-neutral: #ffc800;
+  --warning-dark: #b58e00;
 }
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    font-family: 'Mulish';
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  font-family: "Mulish";
 }

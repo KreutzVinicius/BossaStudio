@@ -5,6 +5,7 @@
     "lib": ["ES2020", "DOM", "DOM.Iterable"],
     "module": "ESNext",
     "skipLibCheck": true,
+    "types": ["vite/client"],
 
     /* Bundler mode */
     "moduleResolution": "node",
@@ -29,12 +30,11 @@
     "paths": {
       "@assets/*": ["./assets/*"],
       "@components/*": ["./components/*"],
-      "@config/*": ["./config/*"],
-      "@contexts/*": ["./contexts/*"],
+      // "@config/*": ["./config/*"],
+      // "@contexts/*": ["./contexts/*"],
       "@graphql/*": ["./graphql/*"],
       "@hooks/*": ["./hooks/*"],
       "@pages/*": ["./pages/*"],
-      "@service/*": ["./service/*"],
       "@utils/*": ["./utils/*"]
     }
   },
