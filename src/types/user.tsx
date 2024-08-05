@@ -4,3 +4,8 @@ export type User = {
   email?: string;
   password?: string;
 };
+
+export enum ProjectsType {
+  Personal = `personal`,
+  Outsourced = `outsourced`,
+}

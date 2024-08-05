@@ -4,26 +4,33 @@ import { User } from '../types/user';
 interface ContextData {
   user: User | null;
   setUser: (user: User | null) => void;
+  step: string;
+  setStep: (step: string) => void;
 }
 
 const InitialValues: ContextData = {
   user: null,
   setUser: () => {},
+  step: `one`,
+  setStep: () => {},
 };
 
-export const AuthContext = createContext<ContextData>(InitialValues);
+export const Context = createContext<ContextData>(InitialValues);
 
-export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
+export const Provider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   const [user, setUser] = useState<User | null>(null);
+  const [step, setStep] = useState<string>(`one`);
 
   return (
-    <AuthContext.Provider
+    <Context.Provider
       value={{
         user,
         setUser,
+        step,
+        setStep,
       }}
     >
       {children}
-    </AuthContext.Provider>
+    </Context.Provider>
   );
 };

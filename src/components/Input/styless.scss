@@ -35,7 +35,6 @@
     color: $neutral-dark-2;
     width: 100%;
 
-    @extend %elektrafi-paragraph-medium;
   }
 
   :focus {
@@ -47,8 +46,6 @@
   ::-ms-input-placeholder {
     /* Microsoft Edge */
     color: $neutral-light-0;
-
-    @extend %elektrafi-paragraph-medium;
   }
 
   :-ms-input-placeholder {
