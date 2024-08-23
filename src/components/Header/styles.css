@@ -5,6 +5,39 @@
     background: var(--color-primary-dark);
     display: flex;
     flex-direction: column;
+    justify-content: center;
+
     border-top: none;
+
+    .top-bar-container{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 1rem;
+        height: 3rem;
+    }
+
+    .top-right-header{
+        display: flex;
+        height: 7rem;
+    }
+
+
+    .tabs-container{
+        display: flex;
+        justify-content: space-between;
+        gap: 1rem
+    }
+
+    .tab{
+        cursor: pointer;
+    }
+
+    .active{
+        color: var(--color-primary-light);
+        border-bottom: 2px solid var(--color-primary-light);
+    }
+
+
 
 }

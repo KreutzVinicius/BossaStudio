@@ -3,26 +3,33 @@ import { User } from '../types'
 
 interface ContextData {
     user: User | null
+    page: number
+    setPage: (number: number) =>void
 }
 
 const InitialValues: ContextData = {
     user: null,
+    page: 0,
+    setPage: ()=>{}
 }
 
-export const AuthContext = createContext<ContextData>(InitialValues)
+export const Context = createContext<ContextData>(InitialValues)
 
-export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({
+export const Provider: React.FC<{ children: React.ReactNode }> = ({
     children,
 }) => {
     const [user, setUser] = useState<User | null>(null)
+    const [page, setPage] = useState(0)
 
     return (
-        <AuthContext.Provider
+        <Context.Provider
             value={{
                 user,
+                page,
+                setPage
             }}
         >
             {children}
-        </AuthContext.Provider>
+        </Context.Provider>
     )
 }
