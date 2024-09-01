@@ -35,7 +35,7 @@
       "@hooks/*": ["./hooks/*"],
       "@pages/*": ["./pages/*"],
       "@service/*": ["./service/*"],
-      "@utils/*": ["./utils/*"]
+      "@utils/*": ["./utils/*"],
     }
   },
   "include": ["src", "./index.d.ts"],

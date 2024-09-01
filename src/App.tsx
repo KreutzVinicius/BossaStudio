@@ -1,5 +1,5 @@
 import './App.css'
-import { Provider } from './contexts/context'
+import { Provider } from '@contexts/context'
 import AppRoutes from './routes'
 
 function App() {
